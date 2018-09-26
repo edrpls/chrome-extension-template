@@ -1,0 +1,38 @@
+{
+    "name": "chrome-extension-template",
+    "version": "0.0.1",
+    "description": "Chrome extension boilerplate, replace all values!",
+    "main": "src/index.js",
+    "repository": "git@bitbucket.org:gumgum/gg-screenshots.git",
+    "license": "MIT",
+    "devDependencies": {
+        "babel-cli": "^6.26.0",
+        "babel-eslint": "^7.2.3",
+        "babel-loader": "^7.1.1",
+        "babel-plugin-transform-object-rest-spread": "^6.26.0",
+        "babel-plugin-transform-react-jsx": "^6.24.1",
+        "babel-preset-env": "^1.6.1",
+        "copy-webpack-plugin": "^4.0.1",
+        "crx-webpack-plugin": "^0.1.5",
+        "eslint": "^4.2.0",
+        "eslint-plugin-react": "^7.1.0",
+        "rimraf": "^2.6.1",
+        "webpack": "^3.2.0"
+    },
+    "scripts": {
+        "start": "nodemon --exec yarn build",
+        "prebuild": "rimraf dist GumGumScreenshots.crx",
+        "build": "webpack"
+    },
+    "nodemonConfig": {
+        "ignore": ["dist/", "node_modules"],
+        "execMap": {
+            "js": "node"
+        },
+        "ext": "js html css",
+        "verbose": true
+    },
+    "dependencies": {
+        "nodemon": "^1.14.12"
+    }
+}

@@ -1,6 +1,6 @@
 {
     "name": "chrome-extension-template",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "Chrome extension boilerplate, replace all values!",
     "main": "src/index.js",
     "repository": "git@bitbucket.org:gumgum/gg-screenshots.git",
@@ -25,7 +25,10 @@
         "build": "webpack"
     },
     "nodemonConfig": {
-        "ignore": ["dist/", "node_modules"],
+        "ignore": [
+            "dist/",
+            "node_modules"
+        ],
         "execMap": {
             "js": "node"
         },

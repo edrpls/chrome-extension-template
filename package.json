@@ -21,14 +21,11 @@
     },
     "scripts": {
         "start": "nodemon --exec yarn build",
-        "prebuild": "rimraf dist GumGumScreenshots.crx",
+        "prebuild": "rimraf dist",
         "build": "webpack"
     },
     "nodemonConfig": {
-        "ignore": [
-            "dist/",
-            "node_modules"
-        ],
+        "ignore": ["dist/", "node_modules"],
         "execMap": {
             "js": "node"
         },

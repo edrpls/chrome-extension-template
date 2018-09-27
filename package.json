@@ -3,7 +3,7 @@
     "version": "0.0.4",
     "description": "Chrome extension boilerplate, replace all values!",
     "main": "src/index.js",
-    "repository": "git@bitbucket.org:gumgum/gg-screenshots.git",
+    "repository": "git@github.com:edrpls/chrome-extension-template.git",
     "license": "MIT",
     "devDependencies": {
         "babel-cli": "^6.26.0",
@@ -25,10 +25,7 @@
         "build": "webpack"
     },
     "nodemonConfig": {
-        "ignore": [
-            "dist/",
-            "node_modules"
-        ],
+        "ignore": ["dist/", "node_modules"],
         "execMap": {
             "js": "node"
         },

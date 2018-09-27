@@ -17,7 +17,8 @@ git clone git@github.com:edrpls/chrome-extension-template.git name-of-your-proje
 Set git to track your own repository instead of this one:
 
 ```
-git remote set-url --add origin [YOUR REPO URL]
+git remote set-url --remove origin git@github.com:edrpls/chrome-extension-template.git # Remove old origin
+git remote set-url --add origin [YOUR REPO URL] # Add new origin
 ```
 
 Install dependencies:

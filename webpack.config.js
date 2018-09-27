@@ -33,10 +33,5 @@ module.exports = {
             { from: './src/images' },
             { from: './src/views' }
         ])
-        //new Crx({
-        //    contentPath: path.resolve(__dirname, 'dist'),
-        //    outputPath: './',
-        //    name: `chrome-extension-template_${version}`
-        //})
     ]
 };

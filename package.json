@@ -1,6 +1,6 @@
 {
     "name": "chrome-extension-template",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "description": "Chrome extension boilerplate, replace all values!",
     "main": "src/index.js",
     "repository": "git@bitbucket.org:gumgum/gg-screenshots.git",
@@ -21,7 +21,7 @@
     },
     "scripts": {
         "start": "nodemon --exec yarn build",
-        "prebuild": "rimraf dist GumGumScreenshots.crx",
+        "prebuild": "rimraf dist",
         "build": "webpack"
     },
     "nodemonConfig": {

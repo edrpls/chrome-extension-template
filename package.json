@@ -1,6 +1,6 @@
 {
     "name": "chrome-extension-template",
-    "version": "0.0.6",
+    "version": "0.0.7",
     "description": "Chrome extension boilerplate, replace all values!",
     "main": "src/index.js",
     "repository": "git@github.com:edrpls/chrome-extension-template.git",

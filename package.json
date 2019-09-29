@@ -29,8 +29,5 @@
         },
         "ext": "js html css",
         "verbose": true
-    },
-    "dependencies": {
-        "remove": "^0.1.5"
     }
 }

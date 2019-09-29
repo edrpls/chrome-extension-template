@@ -1,7 +1,5 @@
 const path = require('path');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-const Crx = require('crx-webpack-plugin');
-const { version } = require('./package.json');
 
 module.exports = {
     entry: {
@@ -18,7 +16,7 @@ module.exports = {
     devtool: 'eval-cheap-module-source-map',
 
     module: {
-        loaders: [
+        rules: [
             {
                 test: /\.js?$/,
                 include: [path.resolve(__dirname, 'src')],

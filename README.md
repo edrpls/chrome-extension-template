@@ -2,9 +2,7 @@
 
 ## Introduction
 
-This project aims to provide an easy to use boilerplate for chrome extensions, showcasing communication between its different scripts.
-
-Not all extensions will need of all scripts or all types of messaging. All code snippets are optional. Text and images should be replaced with your own.
+collect-hackernews
 
 ## Installation
 
@@ -60,16 +58,3 @@ Find the `dist/` directory on your system and open it.
 The extension should be now at the top of the page:
 
 ![Extension Loaded](assets/ext_loaded.png)
-
-## Publishing
-
-[Follow the official docs](https://developer.chrome.com/webstore/publish) to learn how to publish a Chrome extension.
-Please note that Google has its own process to review public extensions and using this boilerplate **does not guarantee** that the extension will pass it. Passing the review process is your responsibility!
-
-## External resources
-
-*   [Sample extension built with this template](https://github.com/edrpls/social-network-alert)
-
-*   [Chrome Developer Documentation](https://developer.chrome.com/extensions/devguide)
-
-*   [Overview slides about Chrome Extensions](https://github.com/edrpls/chrome-extensions-what-why-how)

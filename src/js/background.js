@@ -1,24 +1,31 @@
-/* background.js
- *
- * This file has an example of how to make variables accessible to other scripts of the extension.
- *
- * It also shows how to handle short lived messages from other scripts, in this case, from in-content.js
- *
- * Note that not all extensions need of a background.js file, but extensions that need to persist data after a popup has closed may need of it.
- */
 
-// A sample object that will be exposed further down and used on popup.js
-const sampleBackgroundGlobal = {
-    message: 'This object comes from background.js'
+const axios = require('axios');
+
+console.log('initializing background js')
+
+function News(object){
+    this.link = object.href
+    this.header = object.innerHTML
+    this.created = new Date()
+}
+
+const backgroundGlobal = {
+    news:[]
 };
+window.backgroundGlobal = backgroundGlobal;
 
-// Listen to short lived messages from in-content.js
-chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
-    // Perform any ther actions depending on the message
-    console.log('background.js - received message from in-content.js:', message);
-    // Respond message
-    sendResponse('👍');
-});
+setInterval(()=> {
+    axios.get('https://news.ycombinator.com').then(response=>{
 
-// Make variables accessible from chrome.extension.getBackgroundPage()
-window.sampleBackgroundGlobal = sampleBackgroundGlobal;
+        let newnews = getNews(response.data);
+        backgroundGlobal.news = getNews(response.data).map(obj => new News(obj))
+        
+    })
+}, 5000)
+
+function getNews(domData) {
+    var domparser = new DOMParser();
+    var doc = domparser.parseFromString(domData, 'text/html');
+    let newnews = [...doc.querySelectorAll('a.storylink')];
+    return newnews;
+}

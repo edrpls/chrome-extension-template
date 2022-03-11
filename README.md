@@ -1,3 +1,9 @@
+# THIS REPOSITORY HAS BEEN DEPRECATED
+This repository is no longer maintained and should not be used as a template for your extensions.
+Requirements have changed four years after writing this and there are probably better options out there.
+
+---
+
 # chrome-extension-template
 
 ## Introduction
